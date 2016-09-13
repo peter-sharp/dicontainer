@@ -1,5 +1,5 @@
 <?php
-namespace WeddingTools;
+namespace DiContainer;
 
 class DepInjectContainer {
     private $_deps = array();
