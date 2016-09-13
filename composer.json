@@ -6,5 +6,10 @@
             "email": "Peter@petersharp.co.nz"
         }
     ],
+    "autoload": {
+        "psr-0": {
+            "DiContainer":        "",
+        }
+    },
     "require": {}
 }
