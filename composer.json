@@ -1,0 +1,10 @@
+{
+    "name": "peter-sharp/dicontainer",
+    "authors": [
+        {
+            "name": "peter-sharp",
+            "email": "Peter@petersharp.co.nz"
+        }
+    ],
+    "require": {}
+}
