@@ -1,5 +1,6 @@
 <?php
 namespace DiContainer;
+use OutOfBoundsException;
 
 class DepInjectContainer {
     private $_deps = array();
@@ -18,8 +19,12 @@ class DepInjectContainer {
             $this->_deps[$name] = $this->_singletons[$name]($this);
             unset( $this->_singletons[$name]);
         }
-
-        return ( $this->is_dep( $name ) )? $this->_deps[$name] : FALSE;
+        
+        if( !$this->is_dep( $name ) ) {
+            throw new OutOfBoundsException("dependency {$name} not found");
+        }
+        
+        return  $this->_deps[$name];
     }
 
     public function __set( $name, $value ){
